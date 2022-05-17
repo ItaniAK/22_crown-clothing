@@ -20,3 +20,4 @@ const CategoryItem = ({categories}) => {
 };
 
 export default CategoryItem;
+
