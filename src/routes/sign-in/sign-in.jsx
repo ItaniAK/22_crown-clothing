@@ -1,4 +1,7 @@
-import {createUserDocumentFromAuth, signInWithGooglePopup} from '../../utils/firebase';
+import {
+  createUserDocumentFromAuth, 
+  signInWithGooglePopup
+} from '../../utils/firebase';
 
 import SignUpForm from '../../components/sign-up-form/sign-up-form';
 
