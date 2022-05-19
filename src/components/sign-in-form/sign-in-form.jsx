@@ -41,7 +41,22 @@ const SignInForm = () => {
         try {
             const response = await SingInUserWithEmailAndPassword(email, password); 
             console.log(response);
-        } catch (error) {  
+        } catch (error) { 
+            switch (error.code) {
+                case 'auth/user-not-found':
+                    alert('Np user associated with this email');
+                    break;
+                
+                case 'auth/wrong-password':
+                    alert('Incorrect password with this email');
+                    break;
+                default: 
+                    console.log(error);
+                
+            }
+            // auth/user-not-found
+            // auth/wrong-password
+            console.log(error) 
         };
         
     } 
