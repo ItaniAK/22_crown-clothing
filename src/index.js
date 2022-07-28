@@ -3,6 +3,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import * as ReactDOMClient from 'react-dom/client';
 
+import { UserProvider } from './contexts/user.context';
+
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
@@ -15,7 +17,9 @@ const root = ReactDOMClient.createRoot(rootElement);
 
 root.render(
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </BrowserRouter>
 );
 

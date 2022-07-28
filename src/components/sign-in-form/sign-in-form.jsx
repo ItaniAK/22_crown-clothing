@@ -42,8 +42,13 @@ const SignInForm = () => {
         event.preventDefault();
         
         try {
-            const {user} = await SingInUserWithEmailAndPassword(email, password); 
+            const {user} = await SingInUserWithEmailAndPassword(
+                email, 
+                password
+                ); 
             setCurrentUser(user);
+            
+            resetFormFiled();
         } catch (error) { 
             switch (error.code) {
                 case 'auth/user-not-found':
